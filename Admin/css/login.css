@@ -1,0 +1,91 @@
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    background-color: #000099;
+    color:white;
+    margin:0;
+}
+.title {
+
+    background-color:#000066;
+    color: #00ccff;
+    display: flex;
+    font-size: 4em;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.title a{
+    text-decoration: none;
+    background-color:#000066;
+    color: #00ccff;
+}
+.main{
+    background-color:#00008B;
+    color: #00FFFF;
+    display: grid;
+    grid-template-rows: 80vh;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.login,.search{
+    padding: 20px;
+}
+
+
+/* form */
+input,select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    display: block;
+}
+.footer{
+    font-size: 1em;
+    text-align: center;
+    margin-top: 45px;
+    font-family: josefinSabs-bold;
+    color: white;
+    animation: typing-text1 5s steps(36);
+    animation-iteration-count: infinite; 
+    overflow: hidden;
+    white-space: nowrap;
+}
+@keyframes typing-text1 {
+    0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+} 
+input[type=text],input[type=password],select{
+    background-color: #00ccff;
+    color: white;
+    border: none;
+    font-size: 100%;
+    letter-spacing: 0.2em;
+}
+
+input[type=submit]{
+    background-color: #474b4f;
+    color: white;
+    border: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+input[type=submit]:hover{
+    background-color: #86c232;
+    color: white
+}
+
+fieldset{
+    font-size: 20px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+}
