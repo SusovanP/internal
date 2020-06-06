@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>INTERNAL MARKS ASSESSMENT SYSTEMs</title>
+        <title>INTERNAL MARKS ASSESSMENT SYSTEM</title>
+       
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
         
@@ -73,8 +74,11 @@
 		<!-- Modernizr JS
 		============================================ -->		
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
 	    
     </head>
+
+
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -94,16 +98,11 @@
                                 </div>
                                 <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12">
                                     <div class="header-top-right">
-                                        <h3>INTERNAL ASSESSMENT SYSTEM</h3><br>
-                                        <div class="content"><a href="#"><i class="zmdi zmdi-account"></i>ADMIN</a>
-                                            <ul class="account-dropdown">
-                                                <li><a href="../Admin/login.html">Log In</a></li>
-                                            </ul>
+                                        <h6>INTERNAL ASSESSMENT SYSTEM</h6><br>
+                                        <div class="content"  data-toggle="modal" data-target="#adminlogin"><a href="#"><i class="zmdi zmdi-account"></i>ADMIN</a>
+                                         
                                         </div>
-                                        <div class="content"><a href="#"><i class="zmdi zmdi-account"></i>FACULTY</a>
-                                            <ul class="account-dropdown">
-                                                <li><a href="../Admin/login.html">Log In</a></li>
-                                            </ul>
+                                        <div class="content" data-toggle="modal" data-target="#facultylogin"><a href="#"><i class="zmdi zmdi-account"></i>FACULTY</a>
                                         </div>
                                     </div>
                                 </div>
@@ -198,6 +197,103 @@
                         </div>	 
                     </div>
                 </div>
+
+
+
+
+<!--Admin login-->
+<div class="modal fade" id="adminlogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #00004d;">
+        <h3 class="modal-title" id="exampleModalLabel" style="text-align: center; color: #00ffff;">Admin Login</h3>
+        <button type="button" id="btn1" class="close" data-dismiss="modal" aria-label="Close" style="font-size: 10px;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="adminlogin.php" method="post" name="login">
+   
+        <div class="md-form mb-5">
+
+          <label for="form3">
+            <svg class="bi bi-person-circle" width="1.4em" height="1.4em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+  <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+
+</svg> <span style="font-size: 1.4em">Username</span></label>
+          <input type="text" id="form3" class="form-control validate" name="userid" autocomplete="off">
+        </div>
+        <br>
+
+        <div class="md-form mb-4">
+            <label for="defaultForm-pass">
+          <svg class="bi bi-shield-lock-fill" width="1.4em" height="1.4em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M5.187 1.025C6.23.749 7.337.5 8 .5c.662 0 1.77.249 2.813.525a61.09 61.09 0 0 1 2.772.815c.528.168.926.623 1.003 1.184.573 4.197-.756 7.307-2.367 9.365a11.191 11.191 0 0 1-2.418 2.3 6.942 6.942 0 0 1-1.007.586c-.27.124-.558.225-.796.225s-.526-.101-.796-.225a6.908 6.908 0 0 1-1.007-.586 11.192 11.192 0 0 1-2.417-2.3C2.167 10.331.839 7.221 1.412 3.024A1.454 1.454 0 0 1 2.415 1.84a61.11 61.11 0 0 1 2.772-.815zm3.328 6.884a1.5 1.5 0 1 0-1.06-.011.5.5 0 0 0-.044.136l-.333 2a.5.5 0 0 0 .493.582h.835a.5.5 0 0 0 .493-.585l-.347-2a.5.5 0 0 0-.037-.122z"/>
+</svg> <span style="font-size: 1.4em">Password</span></label>
+          <input type="password" id="defaultForm-pass" class="form-control" name="password"  required="required">       
+        </div>
+
+      </div>
+      </div>
+      <div class="modal-footer" style="background-color: #00004d;">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+        <input type="submit" class="btn btn-primary"  name="submit" value="Login">
+      </div>
+  </form>
+    </div>
+  </div>
+</div>
+<!--/admin login-->
+
+<!--faculty login-->
+<div class="modal fade" id="facultylogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #00004d;">
+        <h3 class="modal-title" id="exampleModalLabel" style="text-align: center; color: #00ffff;">Faculty Login</h3>
+        <button type="button" id="btn1" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="facultylogin.php" method="post" name="login">
+   
+        <div class="md-form mb-5">
+
+          <label for="form3">
+            <svg class="bi bi-person-circle" width="1.4em" height="1.4em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+  <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+
+</svg> <span style="font-size: 1.4em">Username</span></label>
+          <input type="text" id="form3" class="form-control validate" name="userid" autocomplete="off">
+        </div>
+        <br>
+
+        <div class="md-form mb-4">
+            <label for="defaultForm-pass">
+          <svg class="bi bi-shield-lock-fill" width="1.4em" height="1.4em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M5.187 1.025C6.23.749 7.337.5 8 .5c.662 0 1.77.249 2.813.525a61.09 61.09 0 0 1 2.772.815c.528.168.926.623 1.003 1.184.573 4.197-.756 7.307-2.367 9.365a11.191 11.191 0 0 1-2.418 2.3 6.942 6.942 0 0 1-1.007.586c-.27.124-.558.225-.796.225s-.526-.101-.796-.225a6.908 6.908 0 0 1-1.007-.586 11.192 11.192 0 0 1-2.417-2.3C2.167 10.331.839 7.221 1.412 3.024A1.454 1.454 0 0 1 2.415 1.84a61.11 61.11 0 0 1 2.772-.815zm3.328 6.884a1.5 1.5 0 1 0-1.06-.011.5.5 0 0 0-.044.136l-.333 2a.5.5 0 0 0 .493.582h.835a.5.5 0 0 0 .493-.585l-.347-2a.5.5 0 0 0-.037-.122z"/>
+</svg> <span style="font-size: 1.4em">Password</span></label>
+          <input type="password" id="defaultForm-pass" class="form-control" name="password" required="required">       
+        </div>
+
+      </div>
+      </div>
+      <div class="modal-footer" style="background-color: #00004d;">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+        <input type="submit" class="btn btn-primary"  name="submit1" value="Login">
+      </div>
+  </form>
+    </div>
+  </div>
+</div>
+<!--/faculty login-->
                 <!--End of Slider Area-->
                 <br><br>
                 <!--About Area Start--> 
